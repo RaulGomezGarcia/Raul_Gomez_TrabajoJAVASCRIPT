@@ -1,6 +1,6 @@
 
 //Hacemos la busqueda del JSON
-fetch('../assets/data/experiencias.json')  
+fetch('experiencias.json')  
     //Nos aseguramos que la respuesta  sea en formato JSON
     .then(response => response.json())
     .then(experiencias => {
