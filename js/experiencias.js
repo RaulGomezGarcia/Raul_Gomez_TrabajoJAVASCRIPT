@@ -30,7 +30,7 @@ fetch('experiencias.json')
         //Creamos los eventos para que se vea el contenido "descripcion"
         const cabeceras = document.querySelectorAll('.cabecera');
         cabeceras.forEach(cabecera => {
-            cabecera.addEventListener('click', ()=>{
+            cabecera.addEventListener('mouseenter', ()=>{
                 const contenidoActual = cabecera.nextElementSibling;//Me he pegado un rato para averiguar este metodo
 
                 //Creamos esta condicional junto a la constante de arriba para que solo un contenido de los 3 se muestre al mismo tiempo
@@ -40,12 +40,15 @@ fetch('experiencias.json')
                     }
                 });
 
-                if(contenidoActual.style.display === 'none'){
-                    contenidoActual.style.display = 'block'
-                }else{
-                    contenidoActual.style.display = 'none'
-                }
+                contenidoActual.style.display = 'block';
             });
+            cabecera.addEventListener('mouseleave', ()=>{
+                const contenidoActual = cabecera.nextElementSibling;
+                
+                setTimeout(()=>{
+                    contenidoActual.style.display = 'none';
+                },200)
+            })
         })
     })
     .catch(error =>{console.error('Error al cargar el archivo JSON ' + error)})
