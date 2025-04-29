@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raúl Gómez Developer</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--LINK ICONO-->
+    <link rel="shortcut icon" href="./icono.ico" type="image/x-icon">
+</head>
+<body>
+    <!--4 SECCIONES
+        Mi nombre y Barran NAV en el mismo bloque
+        -1 Seccion una imagen de 100vh de mi otro proyecto en el que si clicas te lleve a mi otro poryecto de html y css
+        -2 seccion OBLIGADO seccion de noticias cargadas desde archivo externo
+        -3 seccion Experiecia labora
+        -4 seccion hobbies
+    -->
+
+    <!--Cabecera y barra NAV-->
+    <header>
+        <nav>
+            <img src="./images/logo_mi_nombre-removebg-preview.png" alt="Logo de la web" class="img-logo">
+            <div class="links-box" id="links-box"></div>
+        </nav>
+    </header>
+
+    <!---CUERPO DE LA PAGINA--->
+    <main>
+            <!--SECCION 1: Imagen proyecto anterior-->
+        <section class="section">
+            <h2 class="titulo">PROYECTOS</h2>
+            <a href="https://raulgomezgarcia.github.io/raul_gomez_trabajoHTML/" target="_blank" class="proyectos-link">
+                <div class="contenedor-proyectos">
+                    <div class="descripcion">
+                        <h3>
+                            SNEAKERSHOOT
+                        </h3>
+                        <p>
+                            Proyecto realizado para el final de la asignatura de <span>HTML Y CSS</span>. En el que realizo un sitio web para una empresa de compraventas de Sneakers ficticio
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </section>
+            </div>
+        <section class="section">
+            <div class="contenedor-experiencia">
+                <!--MIRAR PARA HACER LA TARJETAS DINAMICAS.
+                    Que aparezca una y dandole a una flecha que aparezca la otra
+                -->
+                <h2 class="titulo">Experiecia Laboral</h2>
+
+                <div class="experiencias">
+                    <div class="target-exp" id="target-exp">
+                        <div id="cabecera">
+                            <h3>Monitor de escalada</h3>
+                        </div>
+                       <div class="descripcion-exp" id="descripcion-exp">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus temporibus pariatur culpa laudantium inventore quo corrupti fugit quasi iusto ad! Ab odit quo eaque numquam debitis, eius repellendus reprehenderit est.
+                        </div>
+                    </div>
+                    
+                    <div class="target-exp" id="target-exp">
+                        <div id="cabecera">
+                            <h3>Monitor de escalada</h3>
+                        </div>
+                       <div class="descripcion-exp" id="descripcion-exp">
+                            Beclimb 2018-2021
+                        </div>
+                    </div>
+
+                    <div class="target-exp" id="target-exp">
+                        <div id="cabecera">
+                            <h3>Mozo conductor</h3>
+                        </div>
+                       <div class="descripcion-exp" id="descripcion-exp">
+                            Beclimb 2018-2021
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+    <footer>
+        &copy;Todos los derechos Reservados
+    </footer>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>

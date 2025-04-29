@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*ESTILOS DEL BODY*/
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:aliceblue;
+}
+
+/*--------ESTILOS DEL HEADER y NAV-------*/
+header{
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(193, 192, 192, 0.641);
+    z-index: 100;
+    height: 100px;
+}
+.img-logo{
+    height: 100px;
+    width: 100px;
+}
+
+.links-box{
+    display: flex;
+    gap: 50px;
+}
+
+.links-box a{
+    text-decoration: none;
+    color: #3337a9;
+    transition: all .3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #3337a999;
+    border-radius: 10px;
+    padding: 10px;
+}
+.links-box a:hover{
+    transform: scale(1.2);
+    color: purple;
+}
+
+nav{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: px;
+}
+
+/*------SECTION GENERALES--------*/
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 100vh;
+    max-width: 70%;
+    margin: 20px auto;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3337a999;
+    color: white;
+    border: 1px solid #3337a9;
+    border-radius: 10px;
+    font-size: 40px;
+    height: 70px;
+}
+
+/*-----------------PROYECTO ESTATICO*/
+
+.proyectos-link{
+    text-decoration: none;
+}
+
+.contenedor-proyectos{
+   display: flex;
+   align-items: flex-end;
+   width: 100%;
+   border-radius: 10px;
+   box-shadow: 1px 7px 10px 2px #000;
+   height: 400px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(../images/imagen_proyecto_web.png);
+   transition: all .3s ease;
+   cursor: pointer;
+}
+
+.contenedor-proyectos:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 7px 10px 2px #3337a9;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 10px;
+    background: linear-gradient(to top, #fff, transparent);
+    width: 100%;
+    height: 70%;
+    align-items: center;
+}
+
+.descripcion h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(179, 0, 0);
+}
+
+.descripcion p{
+    font-size: 20px;
+}
+.descripcion span{
+    font-style: italic;
+    color: rgb(179, 0, 0);;
+}
+
+
+/*-----------EXPERIENCIA LABORAL*/
+
+
+
+.experiencias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.target-exp{
+    padding: 20px;
+    text-align: center;
+}
+
+
+#cabecera{
+    background-color:#3337a9c5;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #3337a9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cabecera:hover{
+    transform: scale(1.2);
+    border: 2px solid #3337a9;
+    margin-bottom: 15px;
+}
+
+.descripcion-exp{
+    display: none;
+    background-color: #343434;
+    color: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 7px 7px 2px #3337a9;;
+    padding: 10px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.descripcion-exp:hover{
+    margin-top: 30px;
+    transform: scale(1.2);
+}
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+}
