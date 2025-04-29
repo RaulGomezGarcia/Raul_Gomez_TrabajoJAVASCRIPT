@@ -1,6 +1,6 @@
 
 //Hacemos la busqueda del JSON
-fetch('../data/experiencias.json')  
+fetch('../assets/data/experiencias.json')  
     //Nos aseguramos que la respuesta  sea en formato JSON
     .then(response => response.json())
     .then(experiencias => {
@@ -48,5 +48,4 @@ fetch('../data/experiencias.json')
             });
         })
     })
-    .catch( error =>{console.error('Error al cargar el archivo JSON ' + error)})
-
+    .catch(error =>{console.error('Error al cargar el archivo JSON ' + error)})

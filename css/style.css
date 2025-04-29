@@ -92,7 +92,7 @@ nav{
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   background-image: url(../images/imagen_proyecto_web.png);
+   background-image: url(../assets/imagen_proyecto_web.png);
    transition: all .3s ease;
    cursor: pointer;
 }
