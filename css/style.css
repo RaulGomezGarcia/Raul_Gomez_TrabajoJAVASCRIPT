@@ -134,7 +134,7 @@ nav{
 
 
 
-.experiencias{
+#experiencias{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
@@ -146,7 +146,7 @@ nav{
 }
 
 
-#cabecera{
+.cabecera{
     background-color:#3337a9c5;
     color: white;
     border-radius: 10px;
@@ -156,14 +156,14 @@ nav{
     transition: all 0.3s ease;
 }
 
-#cabecera:hover{
+.cabecera:hover{
     transform: scale(1.2);
     border: 2px solid #3337a9;
     margin-bottom: 15px;
+    margin: 0 15px;
 }
 
 .descripcion-exp{
-    display: none;
     background-color: #343434;
     color: aliceblue;
     border: 1px solid black;

@@ -1,0 +1,14 @@
+[
+    {
+        "puesto": "Monitor de escalada",
+        "descripcion": "Descripcion del puesto"
+    },
+    {
+        "puesto": "Mozo conductor",
+        "descripcion": "Descripcion del puesto"
+    },
+    {
+        "puesto": "Azafato de eventos",
+        "descripcion": "Descripcion del puesto"
+    }
+]
