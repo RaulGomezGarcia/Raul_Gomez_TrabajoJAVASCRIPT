@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raúl Gómez Developer</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--LINK ICONO-->
+    <link rel="shortcut icon" href="../icono.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!--Cabecera y barra NAV-->
+    <header>
+        <nav>
+            <img src="../assets/logo_mi_nombre-removebg-preview.png" alt="Logo de la web" class="img-logo">
+            <div class="links-box" id="links-box"></div>
+        </nav>
+    </header>
+
+    <!---CUERPO DE LA PAGINA--->
+    <main>
+        <section class="section">
+            <h1 class="titulo">Formulario de solicitud</h1>
+            
+            <div class="formulario-container">
+                <h2 class="titulo-contacto">Datos</h2>
+                <form class="form" id="formulario">
+                    <div class="input-contenedor">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <span class="error" id="nombreError"></span>
+                    </div>
+                    <div class="input-contenedor">
+                        <label for="nombre">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos">
+                        <span class="error" id="apellidosError"></span>
+                    </div>
+                    <div class="input-contenedor">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono">
+                        <span class="error" id="telefonoError"></span>
+                    </div>
+                    <div class="input-contenedor">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <h2 class="titulo-contacto">Presupuesto</h2>
+                    <div class="productos">
+                        <label for="seleccion-productos">Seleccione un producto: </label>
+                        <select name="seleccion-productos" id="seleccion-productos">
+                            <option value="">--Selecciona un producto</option>
+                            <option value="producto1:20">Producto 1 - 20€</option>
+                            <option value="producto2:30">Producto 2 - 30€</option>
+                            <option value="producto3:40">Producto 3 - 40€</option>
+                        </select>
+                        <button type="button" id="push-carrito">Añadir al carrito</button>
+                    </div>
+                    <div class="plan-meses">
+                        <label for="plazo">Plazo de entrega (meses): </label>
+                        <input type="number" name="plazo" id="plazo" min="1" value="1">
+                    </div>
+                    <div class="extras">
+                        <h3>--Extras</h3>
+                        <label>
+                            <input type="checkbox" class="checkbox-extra" value="Color al gusto:2">
+                            Color al gusto 2€
+                        </label>
+                        <label>
+                            <input type="checkbox" class="checkbox-extra" value="Atencion personalizada:5">
+                            Atencion personalizada 5€
+                        </label>
+                        <label>
+                            <input type="checkbox" class="checkbox-extra" value="Entrega rapida:10">
+                            Entrega rapida 10€
+                        </label>
+                    </div>
+
+                    <div class="carrito" id="contenedor-carrito">
+                        <h3>Carrito: </h3>
+                        <div class="articulos-carrito" id="articulos-carrito"></div>
+                    </div>
+
+                   <p class="total-final" id="total-final">Total final: 0€</p>
+
+                    <div class="button-contenedor">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section">
+
+        </section>
+    </main>
+
+
+
+
+
+    <footer>
+        &copy;Todos los derechos Reservados
+    </footer>
+    
+    <script src="../js/navbar.js"></script>
+    <script src="../js/formulario.js"></script>
+</body>
+</html>

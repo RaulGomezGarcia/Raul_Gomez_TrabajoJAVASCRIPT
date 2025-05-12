@@ -2,19 +2,19 @@ const linksBox = document.getElementById('links-box');
 const linksItem = [
     {
         title: "Inicio",
-        url: "#"
+        url: "../index.html"
     },
     {
         title: "Contacto",
-        url: "./views/contacto.html"
+        url: "../views/contacto.html"
     },
     {
         title: "Galeria",
-        url: "./views/galeria.html"
+        url: "../views/galeria.html"
     },
     {
         title: "Presupuesto",
-        url: "./views/presupuestos.html"
+        url: "../views/presupuestos.html"
     },
 ]
 

@@ -60,7 +60,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    min-height: 100vh;
+    min-height: 80vh;
     max-width: 70%;
     margin: 20px auto;
 }
@@ -85,10 +85,10 @@ nav{
 .contenedor-proyectos{
    display: flex;
    align-items: flex-end;
-   width: 100%;
+   max-width: 100%;
    border-radius: 10px;
    box-shadow: 1px 7px 10px 2px #000;
-   height: 400px;
+   height: 500px;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
@@ -197,8 +197,135 @@ nav{
 }
 
 
+/*--------------------PRESENTACION*/
+.contenedor-presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-circular{
+    width: 200px;
+    height: auto;
+    border-radius: 30%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenedor-presentacion h3{
+    background-color: #3337a999;
+    color: #3337a9;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.contenedor-presentacion p{
+    text-align: center;
+    max-width: 700px;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.iconos{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.icono{
+    width: 50px;
+    height: auto;
+    background-color: #3337a999;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+.icono:hover{
+    transform: translateY(-5px) scale(1.05);
+}
 
 
+
+/*********************************PRESUPUESTOS*********************************/
+
+/******Datos*/
+.formulario-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #3337a9;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.titulo-contacto{
+    text-align: center;
+    font-size: 30px;
+    color: #3337a9;
+    margin-top: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input-contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-contenedor input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #3337a999;
+    background-color: transparent;
+    color: purple;
+}
+
+.button-contenedor{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.button-contenedor button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    cursor: pointer;
+    background-color: #3337a9c5;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.button-contenedor button:hover{
+    background-color: purple;
+    transform: translateY(5px);
+}
+
+.valido{
+    border-color: greenyellow;
+}
+
+.invalido{
+    border-color: rgb(179, 0, 0);
+}
+
+.error{
+    color: rgb(179, 0, 0);
+}
 
 footer{
     width: 100%;
