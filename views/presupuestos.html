@@ -53,9 +53,9 @@
                         <label for="seleccion-productos">Seleccione un producto: </label>
                         <select name="seleccion-productos" id="seleccion-productos">
                             <option value="">--Selecciona un producto</option>
-                            <option value="producto1:20">Producto 1 - 20€</option>
-                            <option value="producto2:30">Producto 2 - 30€</option>
-                            <option value="producto3:40">Producto 3 - 40€</option>
+                            <option value="Producto 1:20">Producto 1 - 20€</option>
+                            <option value="Producto 2:30">Producto 2 - 30€</option>
+                            <option value="Producto 3:40">Producto 3 - 40€</option>
                         </select>
                         <button type="button" id="push-carrito">Añadir al carrito</button>
                     </div>
@@ -65,18 +65,20 @@
                     </div>
                     <div class="extras">
                         <h3>--Extras</h3>
-                        <label>
-                            <input type="checkbox" class="checkbox-extra" value="Color al gusto:2">
-                            Color al gusto 2€
-                        </label>
-                        <label>
-                            <input type="checkbox" class="checkbox-extra" value="Atencion personalizada:5">
-                            Atencion personalizada 5€
-                        </label>
-                        <label>
-                            <input type="checkbox" class="checkbox-extra" value="Entrega rapida:10">
-                            Entrega rapida 10€
-                        </label>
+                        <div class="div-extras">
+                            <label>
+                                <input type="checkbox" class="checkbox-extra" value="Color al gusto:2">
+                                <span class="checkbox-text">Color al gusto 2€</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="checkbox-extra" value="Atencion personalizada:5">
+                                <span class="checkbox-text">Atencion personalizada 5€</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="checkbox-extra" value="Entrega rapida:10">
+                                <span class="checkbox-text">Entrega rapida 10€</span>
+                            </label>
+                            </div>
                     </div>
 
                     <div class="carrito" id="contenedor-carrito">
