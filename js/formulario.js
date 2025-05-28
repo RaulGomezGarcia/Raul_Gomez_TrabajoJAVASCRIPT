@@ -9,31 +9,38 @@ const formulario = document.getElementById("formulario");
 const aceptaTerminosCheckbox = document.getElementById("aceptaTerminos");
 const terminosErrorSpan = document.getElementById("terminosError");
 
+//Array para el carrito
+let carrito = [];
+
 function validarNombre(){
     const nombre = nombreInput.value;
-    const nombrePattern = /^[a-zA-Z]{3,15}$/
+    const nombrePattern = /^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]{3,15}$/
     if(nombre.length >= 3 && nombrePattern.test(nombre)){
         nombreInput.classList.add('valido');
         nombreInput.classList.remove('invalido');
         document.getElementById('nombreError').textContent = '';
+        return true
     }else{
         nombreInput.classList.add('invalido');
         nombreInput.classList.remove('valido');
         document.getElementById('nombreError').textContent = 'El nombre debe tener entre 3 y 15 caracteres y empezar con una letra';
+        return false
     }
 }
 
 function validarApellidos(){
     const apellidos = apellidosInput.value;
-    const apellidosPattern = /^[a-zA-Z]{3,40}$/
+    const apellidosPattern = /^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]{3,40}$/
     if(apellidos.length >= 3 && apellidosPattern.test(apellidos)){
         apellidosInput.classList.add('valido');
         apellidosInput.classList.remove('invalido');
         document.getElementById('apellidosError').textContent = '';
+        return true
     }else{
         apellidosInput.classList.add('invalido');
         apellidosInput.classList.remove('valido');
         document.getElementById('apellidosError').textContent = 'El apellido debe tener entre 3 y 40 caracteres y solo contener letras';
+        return false
     }
 }
 
@@ -44,10 +51,12 @@ function validarTelefono(){
         telefonoInput.classList.add('valido');
         telefonoInput.classList.remove('invalido');
         document.getElementById('telefonoError').textContent = '';
+        return true
     }else{
         telefonoInput.classList.add('invalido');
         telefonoInput.classList.remove('valido');
         document.getElementById('telefonoError').textContent = 'El numero de telefono debe tener 9 digitos y contener solo números';
+        return false
     }
 }
 
@@ -58,10 +67,12 @@ function validarEmail(){
         emailInput.classList.add('valido');
         emailInput.classList.remove('invalido');
         document.getElementById('emailError').textContent = '';
+        return true
     }else{
         emailInput.classList.add('invalido');
         emailInput.classList.remove('valido');
         document.getElementById('emailError').textContent = 'Ingrese un correo electronico válido';
+        return false
     }
 }
 
@@ -106,7 +117,6 @@ aceptaTerminosCheckbox.addEventListener('change', validarTerminos);
 
 //----------------------Logica Presupuesto
 
-let carrito = [];
 
 const selectorProductos = document.getElementById('seleccion-productos');
 const pushCarrito = document.getElementById('push-carrito');
