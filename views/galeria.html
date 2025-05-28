@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raúl Gómez Developer</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lightbox.css">
+    <!--LINK ICONO-->
+    <link rel="shortcut icon" href="../icono.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!--Cabecera y barra NAV-->
+    <header>
+        <nav>
+            <img src="../assets/logo_mi_nombre-removebg-preview.png" alt="Logo de la web" class="img-logo">
+            <div class="links-box" id="links-box"></div>
+        </nav>
+    </header>
+
+    <!---CUERPO DE LA PAGINA--->
+    <main>
+        <section class="section">
+            <h1 class="titulo">
+                Galeria Dinámica
+            </h1>
+            <small class="pulsar">Realizada con una API</small>
+            <div class="galeria">
+                <a href="../assets/galeria-dinamica/galeria/ice-cream.jpg" data-lightbox = "roadtrip" data-title="Helado al sol" ><img src="../assets/galeria-dinamica/galeria/ice-cream.jpg" alt="Helado al sol" class="imagen"></a>
+                <a href="../assets/galeria-dinamica/galeria/ice.jpg" data-lightbox = "roadtrip" data-title="Hielo" ><img src="../assets/galeria-dinamica/galeria/ice.jpg" alt="Hielo" class="imagen"></a>
+                <a href="../assets/galeria-dinamica/galeria/lemonade.jpg" data-lightbox = "roadtrip" data-title="Limonada fresca" ><img src="../assets/galeria-dinamica/galeria/lemonade.jpg" alt="Limonada" class="imagen"></a>
+                <a href="../assets/galeria-dinamica/galeria/lime.jpg" data-lightbox = "roadtrip" data-title="Limonada de Lima" ><img src="../assets/galeria-dinamica/galeria/lime.jpg" alt="Lima" class="imagen"></a>
+            </div>
+            <div class="galeria">
+                <a href="../assets/galeria-dinamica/galeria/sea.jpg" data-lightbox = "roadtrip" data-title="Mar con rocas" ><img src="../assets/galeria-dinamica/galeria/sea.jpg" alt="Mar" class="imagen"></a>
+                <a href="../assets/galeria-dinamica/galeria/tree.jpg" data-lightbox = "roadtrip" data-title="Arbol Blanco" ><img src="../assets/galeria-dinamica/galeria/tree.jpg" alt="Arbol blanco" class="imagen"></a>
+                <a href="../assets/galeria-dinamica/galeria/tree-2.jpg" data-lightbox = "roadtrip" data-title="Arbol" ><img src="../assets/galeria-dinamica/galeria/tree-2.jpg" alt="Arbol" class="imagen"></a>
+            </div>
+            
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="text-footer">
+            <p>
+                <br>Teléfono: 666777888.
+                <br>Correo Electrónico: <a href="#">imaginaria@gmail.com</a>
+                <br>Dirección: Calle Blas de Lezo, 23, 29015
+            </p>
+            <p>&copy;Todos los derechos Reservados</p>
+        </div>
+        <div class="iconos">
+            <a href="https://www.linkedin.com" target="_blank">
+                <img class="icono" src="../assets/linkedin.png" alt="icono Linkedins" height="40" width="40">
+            </a>
+            <a href="https://github.com/RaulGomezGarcia" target="_blank">
+                <img class="icono" src="../assets/github.png" alt="icono de github" height="40" width="40">
+            </a>
+            <a href="https://www.instagram.com/" target="-blank">
+                <img class="icono" src="../assets/instagram-svgrepo-com.svg" alt="icono Linkedins" height="40" width="40">
+            </a>
+        </div>
+    </footer>
+    
+    <script src="../js/navbar.js"></script>
+    <script src="../js/lightbox-plus-jquery.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 800,
+            'wrapAround': true, 
+            'showImageNumberLabel': false
+        })
+    </script>
+</body>
+</html>

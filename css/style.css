@@ -400,15 +400,78 @@ label .checkbox-text{
 }
 
 
+/***********CONTACTO*************/
+#map{
+    border: solid 2px #3337a9;
+    border-radius: 10px;
+    margin-left: 10%;
+    width: 80%;
+    height:700px;
+}
 
+.informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3337a9;
+    height: 100px;
+}
+.informacion small{
+    color: black;
+    font-size: 10px;
+}
+.informacion a{
+    color: rgb(128, 0, 255);
+    text-decoration: none;
 
+}
 
+/**********GALERIA DINÁMICA*******/
+.imagen {
+    width: 10rem;
+    border-radius: .5rem;
+    margin:1rem;
+}
+
+.imagen:hover{
+    border: 3px solid #3337a9;
+    transform: scale(1.2);
+    transition: ease-in-out .5s;
+    margin: 5px;
+}
+
+.galeria{
+    margin-top: .5rem;
+    text-align: center;
+}
 
 
 
 
 footer{
     width: 100%;
-    height: 100px;
-    background-color: gray;
+    height: auto;
+    background-color: #3337a999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-footer{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.text-footer a{
+    text-decoration: none;
+    color: #3337a9;
+}
+
+footer .iconos{
+    display: flex;
+}
+
+footer .icono{
+    background-color: aliceblue;
 }

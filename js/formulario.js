@@ -5,6 +5,10 @@ const telefonoInput = document.getElementById("telefono");
 const emailInput = document.getElementById("email");
 const formulario = document.getElementById("formulario");
 
+//----Terminos y condiciones
+const aceptaTerminosCheckbox = document.getElementById("aceptaTerminos");
+const terminosErrorSpan = document.getElementById("terminosError");
+
 function validarNombre(){
     const nombre = nombreInput.value;
     const nombrePattern = /^[a-zA-Z]{3,15}$/
@@ -61,13 +65,31 @@ function validarEmail(){
     }
 }
 
+//---Funcion Terminos y condiciones
+function validarTerminos(){
+    if(aceptaTerminosCheckbox.checked){
+        terminosErrorSpan.textContent= '';
+        aceptaTerminosCheckbox.classList.remove('invalido');
+        return true
+    }else{
+        terminosErrorSpan.textContent = ' Debe aceptar los términos y condicones'
+        aceptaTerminosCheckbox.classList.add('invalido')
+        return false
+    }
+}
+
 
 function resetFormulario(){
     formulario.reset();
-    nombreInput.classList.remove('valido');
-    apellidosInput.classList.remove('valido')
-    telefonoInput.classList.remove('valido');
-    emailInput.classList.remove('valido');
+    nombreInput.classList.remove('valido', 'invalido');
+    apellidosInput.classList.remove('valido', 'invalido')
+    telefonoInput.classList.remove('valido', 'invalido');
+    emailInput.classList.remove('valido', 'invalido');
+
+    //Reseteamos el chekcbox terminos
+    aceptaTerminosCheckbox.checked = false;
+    aceptaTerminosCheckbox.classList.remove('invalido');
+    terminosErrorSpan.textContent='';
 
     //Reseteamos el carrito
     carrito= [];
@@ -79,6 +101,7 @@ nombreInput.addEventListener('input', validarNombre);
 apellidosInput.addEventListener('input', validarApellidos)
 telefonoInput.addEventListener('input', validarTelefono);
 emailInput.addEventListener('input', validarEmail);
+aceptaTerminosCheckbox.addEventListener('change', validarTerminos);
 
 
 //----------------------Logica Presupuesto
@@ -195,20 +218,30 @@ plazoInput.addEventListener('change', actualizarTotalFinal)
 
 //Llamada del boton del formulario
 formulario.addEventListener('submit', function(event){
-    event.preventDefault();
-    validarNombre();
-    validarApellidos();
-    validarTelefono();
-    validarEmail();
+    event.preventDefault(); // Evita el envío por defecto del formulario
 
-    //Llamamos al actualizarTotalFinal() aquí, despues de la validacion para que se actualize todo
+    // Validar todos los campos antes de intentar enviar
+    const nombreValido = validarNombre();
+    const apellidosValidos = validarApellidos();
+    const telefonoValido = validarTelefono();
+    const emailValido = validarEmail();
+    const terminosAceptados = validarTerminos(); // NUEVO: Validar términos
+
+    // Asegurarse de que haya al menos un producto en el carrito si es necesario
+    if (carrito.length === 0) {
+        alert("Por favor, añade al menos un producto al carrito.");
+        return; // Detiene el envío si no hay productos
+    }
+
+    // Actualizamos el total final una última vez
     actualizarTotalFinal();
 
-    if(nombreInput.classList.contains("valido") && apellidosInput.classList.contains("valido") && telefonoInput.classList.contains("valido") && emailInput.classList.contains("valido")){
+    // Comprobamos que TODOS los campos y el checkbox de términos son válidos
+    if(nombreValido && apellidosValidos && telefonoValido && emailValido && terminosAceptados){
         alert("Formulario enviado correctamente");
         resetFormulario();
-        //Aqui estaria donde lo quieres enviar
+        // Aquí es donde enviarías los datos a un servidor
     }else{
-        alert("Por favor, corrija los errores en el formulario");
+        alert("Por favor, corrija los errores en el formulario.");
     }
 })

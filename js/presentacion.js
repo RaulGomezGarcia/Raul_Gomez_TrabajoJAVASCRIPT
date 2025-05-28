@@ -26,7 +26,7 @@ presentacion.map((item)=>{
                 <img class="icono" src="./assets/github.png" alt="icono de github" height="40" width="40">
             </a>
             <a href=${item.cvLink} target="-blank" download="miCV.pdf">
-                <img class="icono" src="./assets/cv_102350.svg" alt="icono Linkedins" height="40" width="40">
+                <img class="icono" src="./assets/cv_102350.svg" alt="icono cv" height="40" width="40">
             </a>
         </div>
     `
