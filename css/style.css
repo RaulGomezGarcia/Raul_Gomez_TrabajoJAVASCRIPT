@@ -53,6 +53,7 @@ nav{
     justify-content: center;
     align-items: center;
     padding: px;
+    z-index: 99;
 }
 
 /*------SECTION GENERALES--------*/
@@ -131,6 +132,15 @@ nav{
 
 
 /*-----------EXPERIENCIA LABORAL*/
+
+.section-experiencias{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 60vh;
+    max-width: 70%;
+    margin: 20px auto;
+}
 
 .pulsar{
     display: flex;
@@ -407,6 +417,7 @@ label .checkbox-text{
     margin-left: 10%;
     width: 80%;
     height:700px;
+    z-index: 1;
 }
 
 .informacion{
@@ -415,15 +426,11 @@ label .checkbox-text{
     align-items: center;
     color: #3337a9;
     height: 100px;
-}
-.informacion small{
-    color: black;
-    font-size: 10px;
+    margin-bottom: 30px;
 }
 .informacion a{
     color: rgb(128, 0, 255);
     text-decoration: none;
-
 }
 
 /**********GALERIA DINÁMICA*******/
