@@ -21,4 +21,4 @@ const linksItem = [
 
 linksItem.map((link) =>{
     linksBox.innerHTML += `<a href="${link.url}">${link.title}</a>`;
-});
+})
