@@ -4,7 +4,7 @@ const presentacion = [
     {
         nombre: "Raúl Gómez García",
         trabajo: "Programador Junior (en proceso)",
-        descripcion: "Hola buenas soy Raúl Gómez, como ya has podido leer. Te preguntaras ¿Por que la descripcion esta tan abajo?, siempre he pensado que se conoce mejor a una persona por lo que hace que por lo que dice.",
+        descripcion: "¡Muy buenas a ti, que estás visitanto mi pagina! Soy Raúl Gómez, como habrás podido leer :)  A lo mejor te estas preguntando ¿Por qué la descripción está tan abajo? ... Siempre he pensado que se conoce mejor a una persona por lo que hace que por lo que dice, por eso he preferido antes que todo mostrarte a lo que me dedico.",
         linkedin: "https://www.linkedin.com",
         github: "https://github.com/RaulGomezGarcia",
         cvLink: "./assets/miCV.pdf"
