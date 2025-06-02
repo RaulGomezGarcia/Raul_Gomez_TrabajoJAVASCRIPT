@@ -14,19 +14,19 @@ const presentacion = [
 presentacion.map((item)=>{
     presentacionDiv.innerHTML += 
     `   
-        <img class="img-circular" src="./assets/mifoto.png" alt="foto de perfil" height="500" width="700">
+        <img class="img-circular" src="./assets/mifoto.png" alt="foto de perfil" height="288" width="288">
         <h3>${item.nombre} - ${item.trabajo}</h3>
         <p>${item.descripcion}</p>
 
         <div class="iconos">
             <a href=${item.linkedin} target="_blank">
-                <img class="icono" src="./assets/linkedin.png" alt="icono Linkedins" height="40" width="40">
+                <img class="icono" src="./assets/linkedin.png" alt="icono Linkedins" height="50" width="50">
             </a>
             <a href=${item.github}  target="_blank">
-                <img class="icono" src="./assets/github.png" alt="icono de github" height="40" width="40">
+                <img class="icono" src="./assets/github.png" alt="icono de github" height="512" width="512">
             </a>
             <a href=${item.cvLink} target="-blank" download="miCV.pdf">
-                <img class="icono" src="./assets/cv_102350.svg" alt="icono cv" height="40" width="40">
+                <img class="icono" src="./assets/cv_102350.svg" alt="icono cv" height="150" width="150">
             </a>
         </div>
     `

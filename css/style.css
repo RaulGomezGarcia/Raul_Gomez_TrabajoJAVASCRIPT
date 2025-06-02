@@ -348,14 +348,6 @@ nav{
     border-color: #3337a9;
 }
 
-#push-carrito{
-    border-radius: 10px;
-    padding: 5px;
-    background-color: #3337a9c5;
-    color: aliceblue;
-    border: none;
-}
-
 #plazo{
     margin-left: 5px;
     border-radius: 5px;
@@ -434,8 +426,9 @@ label .checkbox-text{
 }
 
 /**********GALERIA DINÁMICA*******/
-.imagen {
+.imagen{
     width: 10rem;
+    height: auto;
     border-radius: .5rem;
     margin:1rem;
 }

@@ -12,6 +12,12 @@ const terminosErrorSpan = document.getElementById("terminosError");
 //Array para el carrito
 let carrito = [];
 
+// Llamamos a actualizarTotalFinal() al cargar la página para que el total inicie en 0€
+document.addEventListener('DOMContentLoaded', () => {
+    actualizarTotalFinal();
+    actualizarCarrito(); // Para mostrar "No hay productos en el carrito." inicialmente
+});
+
 function validarNombre(){
     const nombre = nombreInput.value;
     const nombrePattern = /^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]{3,15}$/
@@ -119,30 +125,23 @@ aceptaTerminosCheckbox.addEventListener('change', validarTerminos);
 
 
 const selectorProductos = document.getElementById('seleccion-productos');
-const pushCarrito = document.getElementById('push-carrito');
 const articulosCont = document.getElementById('articulos-carrito');
 const totalFinal = document.getElementById('total-final');
 const plazoInput = document.getElementById('plazo')
 
 //Añadir productos al carrito
-pushCarrito.addEventListener('click', ()=>{
+selectorProductos.addEventListener('change', () => {
     const optionSelect = selectorProductos.options[selectorProductos.selectedIndex];
     const valorSeleccionado = optionSelect.value;
 
-    //Comprobamos que hay un valor seleccionado
-    if(!valorSeleccionado){
-        alert('Selecciona un producto valido')
-        return
+    if (valorSeleccionado && valorSeleccionado !== "placeholder") { // Verifica que no sea el placeholder
+        const [nombreProducto, precioProducto] = valorSeleccionado.split(":");
+        const precio = parseFloat(precioProducto);
+        carrito.push({ nombre: nombreProducto, precio });
     }
+    actualizarCarrito(); // Llama a actualizarCarrito para reflejar el cambio y luego actualizar el total
+});
 
-    //Se separa el nombre del valor y nos quedamos con el valor
-    const [nombreProducto, precioProducto] = valorSeleccionado.split(":");
-    const precio = parseFloat(precioProducto);
-
-    carrito.push({nombre: nombreProducto, precio});
-    
-    actualizarCarrito()
-})
 
 //Actualizamos el carrito y lo metemos en el html
 function actualizarCarrito(){

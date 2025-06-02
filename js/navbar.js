@@ -3,19 +3,19 @@ const linksBox = document.getElementById('links-box');
 const linksItem = [
     {
         title: "Inicio",
-        url: "/Raul_Gomez_TrabajoJAVASCRIPT/"
+        url: "../index.html"
     },
     {
         title: "Contacto",
-        url: "/Raul_Gomez_TrabajoJAVASCRIPT/views/contacto.html"
+        url: "../views/contacto.html"
     },
     {
         title: "Galeria",
-        url: "/Raul_Gomez_TrabajoJAVASCRIPT/views/galeria.html"
+        url: "../views/galeria.html"
     },
     {
         title: "Presupuesto",
-        url: "/Raul_Gomez_TrabajoJAVASCRIPT/views/presupuestos.html"
+        url: "../views/presupuestos.html"
     },
 ];
 
